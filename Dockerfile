@@ -8,10 +8,10 @@ FROM golang:1.12 as builder
 WORKDIR /go/src/github.com/keptn-contrib/alexa-service
 COPY . .
 
-ARG DEP_VERSION=0.5.3
-RUN curl -L -s https://github.com/golang/dep/releases/download/v$DEP_VERSION/dep-linux-amd64 -o ./dep && \
-  chmod +x ./dep && \
-  ./dep ensure
+#ARG DEP_VERSION=0.5.3
+#RUN curl -L -s https://github.com/golang/dep/releases/download/v$DEP_VERSION/dep-linux-amd64 -o ./dep && \
+#  chmod +x ./dep && \
+#  ./dep ensure
 
 ARG debugBuild
 
